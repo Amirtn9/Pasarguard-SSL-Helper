@@ -28,27 +28,27 @@
 
 <pre><code>#!/bin/bash
 
-# ====== تنظیمات ======
+# ====== Tanzimat ======
 DOMAIN="YOURDOMAIN.COM"
 DEST_DIR="/var/lib/pasarguard/certs/$DOMAIN"
 
-# ====== بررسی و نصب Certbot ======
-if ! command -v certbot &gt; /dev/null; then
-    echo "[INFO] Certbot نصب نیست، در حال نصب..."
+# ====== Barrasi va Nasb Certbot ======
+if ! command -v certbot > /dev/null; then
+    echo "[INFO] Certbot nasb nist, dar hal nasb..."
     sudo apt update
     sudo apt install snapd -y
     sudo snap install core; sudo snap refresh core
     sudo snap install --classic certbot
     sudo ln -s /snap/bin/certbot /usr/bin/certbot
 else
-    echo "[INFO] Certbot نصب است."
+    echo "[INFO] Certbot nasb ast."
 fi
 
-# ====== ساخت مسیر نهایی ======
+# ====== Sakht Masir Nahayi ======
 sudo mkdir -p "$DEST_DIR"
 
-# ====== گرفتن گواهی SSL ======
-echo "[INFO] در حال گرفتن گواهی SSL برای $DOMAIN ..."
+# ====== Gereftan Gavahi SSL ======
+echo "[INFO] dar hal gereftan gavahi SSL baraye $DOMAIN ..."
 sudo certbot certonly \
   --standalone \
   --agree-tos \
@@ -61,7 +61,8 @@ sudo certbot certonly \
   --preferred-challenges http \
   --non-interactive
 
-echo "[INFO] عملیات تمام شد. فایل‌های گواهی در مسیر $DEST_DIR قرار دارند."</code></pre>
+echo "[INFO] amaliat tamam shod. fayl-haye gavahi dar masir $DEST_DIR gharar darand."
+</code></pre>
 
 <hr>
 
