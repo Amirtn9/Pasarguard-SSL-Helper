@@ -2,7 +2,7 @@
 <html lang="fa">
 <head>
 <meta charset="UTF-8">
-<title>آموزش گرفتن گواهی SSL برای پاسارگارد</title>
+#آموزش گرفتن گواهی SSL برای پاسارگارد#
 </head>
 <body dir="rtl">
 
@@ -82,6 +82,14 @@ echo "[INFO] amaliat tamam shod. fayl-haye gavahi dar masir $DEST_DIR gharar dar
 <pre><code>sudo mkdir -p /var/lib/pasarguard/certs/YOURDOMAIN.COM
 sudo cp /etc/letsencrypt/live/YOURDOMAIN.COM/fullchain.pem /var/lib/pasarguard/certs/YOURDOMAIN.COM/
 sudo cp /etc/letsencrypt/live/YOURDOMAIN.COM/privkey.pem /var/lib/pasarguard/certs/YOURDOMAIN.COM/</code></pre>
+
+<hr>
+
+<h2>📌 آدرس فایل‌های گواهی در Pasarguard</h2>
+<p>پس از دریافت یا انتقال گواهی، فایل‌ها در مسیر زیر قرار دارند:</p>
+<pre><code>⭐ Private key: /var/lib/pasarguard/certs/YOURDOMAIN.COM/privkey.pem
+⭐ Full chain: /var/lib/pasarguard/certs/YOURDOMAIN.COM/fullchain.pem</code></pre>
+
 
 </body>
 </html>
